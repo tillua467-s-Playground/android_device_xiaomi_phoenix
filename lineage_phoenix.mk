@@ -15,21 +15,18 @@ $(call inherit-product, device/xiaomi/phoenix/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-WITH_GMS := true
-WITH_GMS_COMMS_SUITE := true
 TARGET_SUPPORTS_OMX_SERVICE := false
 TARGET_BUILD_APERTURE_CAMERA := false
-TARGET_USE_PIXEL_FINGERPRINT := true
-TARGET_INCLUDE_PIXEL_CHARGER := true
-TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_ENABLE_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_FINGERPRINT_UNLOCK_SUPPORTED := true
-TARGET_INCLUDE_STOCK_AICORE := true
+WITH_GMS := true
+WITH_GMS_COMMS_SUITE := true
 TARGET_SUPPORTS_WALLEFFECT := true
+BYPASS_CHARGE_SUPPORTED  := false
+MATRIXX_BUILD_TYPE := Official
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_STOCK_AICORE := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_phoenix
