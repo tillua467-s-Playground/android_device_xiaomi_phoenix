@@ -121,3 +121,6 @@ PRODUCT_PACKAGES += \
 
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/phoenix/phoenix-vendor.mk)
+
+# Inherit From MiuiCam
+$(call inherit-product, vendor/xiaomi/miuicamera/MiuiCamera.mk)
