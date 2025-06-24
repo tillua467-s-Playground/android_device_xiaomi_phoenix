@@ -92,6 +92,9 @@ PRODUCT_PACKAGES += \
 # Private Keys
 -include vendor/lineage-priv/keys/keys.mk
 
+# Kernel
+PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
+
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
