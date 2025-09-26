@@ -27,11 +27,16 @@ PRODUCT_COPY_FILES += \
 
 # Init scripts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.phoenix.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.phoenix.rc
+    $(LOCAL_PATH)/rootdir/etc/init.phoenix.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.phoenix.rc \
+    $(LOCAL_PATH)/rootdir/bin/init.qti.chg_policy.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.chg_policy.sh
+
+PRODUCT_PACKAGES += \
+	init.phoenix.rc \
+	init.qti.chg_policy.sh
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    libkeymaster_messages.vendor:64 
+    libkeymaster_messages.vendor:64
 
 # Input
 PRODUCT_COPY_FILES += \
