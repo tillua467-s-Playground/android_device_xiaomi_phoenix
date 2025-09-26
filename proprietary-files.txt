@@ -273,6 +273,10 @@ vendor/lib64/libxml2_vendor.so
 # Camera Firmware
 vendor/firmware/CAMERA_ICP.elf
 
+# Charger - from phoenix V12.1.2.0.RGHINXM
+vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
+vendor/etc/charger_fstab.qti
+
 # Display calibration
 vendor/etc/hdr_config.cfg
 vendor/etc/qdcm_calib_data_xiaomi_37_02_0a_video_mode_dsc_dsi_panel.xml
