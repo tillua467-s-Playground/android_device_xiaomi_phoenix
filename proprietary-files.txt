@@ -376,6 +376,10 @@ vendor/lib64/libultrasound.so
 vendor/lib64/sensors.elliptic.so
 vendor/lib64/sensors.mius.proximity.so
 
+# Charger
+vendor/bin/batterysecret
+vendor/etc/init/init.batterysecret.rc
+
 # Thermal
 vendor/bin/mi_thermald
 vendor/bin/thermal-engine
