@@ -23,6 +23,14 @@ TARGET_ENABLE_BLUR := true
 BYPASS_CHARGE_SUPPORTED  := true
 
 WITH_GMS := true
+WITH_GMS := true
+USE_REALITY_ENGINE := true
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+$(call soong_config_set,surfaceflinger,frame_rate_category_min,60)
+TARGET_BOOT_ANIMATION_RES := 1080
+WITH_GMS_COMMS_SUITE := true
+TARGET_USE_FILES := true
+SURFACE_FLINGER_BOOST := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := $(PRODUCT_TARGET_ROM)_phoenix
