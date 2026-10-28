@@ -36,6 +36,16 @@ BOARD_SUPER_PARTITION_SIZE := 9126805504
 
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 9122611200 # (BOARD_SUPER_PARTITION_SIZE - 4194304) 4MiB overhead
 
+# ext4 inode counts
+# The build's automatic inode calculation (tree entry count + 6%) is rounded
+# down by mke2fs to an inode-per-group boundary, which leaves the GMS
+# system/system_ext images a handful of inodes short and fails the build with
+# "No space left on device while looking up ...".
+BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := 16384
+BOARD_SYSTEM_EXTIMAGE_EXTFS_INODE_COUNT := 16384
+BOARD_PRODUCTIMAGE_EXTFS_INODE_COUNT := 16384
+BOARD_VENDORIMAGE_EXTFS_INODE_COUNT := 16384
+
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
